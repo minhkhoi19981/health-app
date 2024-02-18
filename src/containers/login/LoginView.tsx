@@ -1,10 +1,13 @@
 import * as stylex from "@stylexjs/stylex";
 import { SubmitHandler, useForm } from "react-hook-form";
 import * as z from "zod";
+import { v4 as uuidv4 } from "uuid";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { IconAlert } from "~/assets/icons";
 import { styles } from "./LoginView.stylex";
-import { Button, Input } from "~/components";
+import { Button, Icon, Input } from "~/components";
+import { authStore } from "~/store";
+import { useNavigate } from "react-router-dom";
 
 type LoginViewProps = {};
 
@@ -36,11 +39,19 @@ const LoginView: React.FC<LoginViewProps> = () => {
     resolver: zodResolver(SignInSchema),
   });
 
+  const { ztSignIn } = authStore();
+  const navigate = useNavigate();
+
   const onSubmit: SubmitHandler<SignInSchemaType> = async (data) => {
     try {
       await new Promise((resolve, reject) =>
         setTimeout(() => {
           if (data.email === EMAIL && data.password === PASSWORD) {
+            ztSignIn({
+              id: uuidv4(),
+              email: data.email,
+            });
+            navigate("/");
             return resolve;
           }
           return reject("Incorrect username or password.");
@@ -56,7 +67,7 @@ const LoginView: React.FC<LoginViewProps> = () => {
       <div {...stylex.props(styles.boxLogin)}>
         <h3 {...stylex.props(styles.title)}>Sign in to Health</h3>
         <div {...stylex.props(styles.alert)}>
-          <img src={IconAlert} width={24} height={24} />
+          <Icon icon={IconAlert} size="small" />
           <div dangerouslySetInnerHTML={{ __html: INFO_AUTH_HTML }} />
         </div>
         <form {...stylex.props(styles.form)} onSubmit={handleSubmit(onSubmit)}>

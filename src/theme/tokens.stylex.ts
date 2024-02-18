@@ -1,5 +1,11 @@
 import * as stylex from "@stylexjs/stylex";
 
+export const DEVICES = {
+  mobile: "768px",
+  tablets: "1024px",
+  desktops: "1200px",
+};
+
 export const colors = stylex.defineVars({
   primaryText: { default: "#414141" },
   light: { default: "#FFFFFF" },
@@ -16,6 +22,8 @@ export const colors = stylex.defineVars({
   dark600: { default: "#2E2E2E" },
   // gray
   gray400: { default: "#777777" },
+  // error
+  error: "#ff4d4f",
 });
 
 export const spacing = stylex.defineVars({
@@ -36,7 +44,23 @@ export const base = stylex.defineVars({
 });
 
 export const font = stylex.defineVars({
+  light: "300",
   normal: "400",
+  medium: "500",
   semibold: "600",
   bold: "bold",
+  hiraginoKaku: "Hiragino Kaku Gothic Pro",
+  inter: "Inter",
+});
+
+export const fontSize = stylex.defineVars({
+  xsmall: "10px",
+  small: "12px",
+  medium: "14px",
+  large: "16px",
+  xlarge: "18px",
+});
+
+export const shadow = stylex.defineVars({
+  small: "rgb(255, 255, 255) 0px 0px 0px 1px",
 });

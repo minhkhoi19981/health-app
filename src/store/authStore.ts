@@ -41,7 +41,7 @@ const authStore = create<Byp>()(
       }),
       {
         name: "health-app-auth",
-        getStorage: () => localStorage,
+        getStorage: () => sessionStorage,
       },
     ),
   ),

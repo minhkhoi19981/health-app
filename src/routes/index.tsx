@@ -1,6 +1,7 @@
 import { Suspense, lazy } from "react";
 import { Outlet, createBrowserRouter } from "react-router-dom";
 import ProtectedRoute from "./ProtectedRoute";
+import { Layout } from "~/components";
 
 const Login = lazy(() => import("pages/login"));
 
@@ -10,7 +11,9 @@ const router = createBrowserRouter([
     element: (
       <ProtectedRoute>
         <Suspense>
-          <Outlet />
+          <Layout>
+            <Outlet />
+          </Layout>
         </Suspense>
       </ProtectedRoute>
     ),
