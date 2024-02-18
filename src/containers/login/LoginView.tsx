@@ -8,7 +8,10 @@ import { Button, Input } from "~/components";
 
 type LoginViewProps = {};
 
-const INFO_AUTH_HTML = `Use email:<strong>demo@health.app</strong> / password: <strong>demo1234</strong>`;
+const EMAIL = "demo@health.app";
+const PASSWORD = "demo1234";
+
+const INFO_AUTH_HTML = `Use email:<strong>${EMAIL}</strong> / password: <strong>${PASSWORD}</strong>`;
 
 const SignInSchema = z.object({
   email: z
@@ -35,9 +38,17 @@ const LoginView: React.FC<LoginViewProps> = () => {
 
   const onSubmit: SubmitHandler<SignInSchemaType> = async (data) => {
     try {
-      await new Promise((resolve) => setTimeout(resolve, 1000));
-      alert(JSON.stringify(data));
-    } catch (error) {}
+      await new Promise((resolve, reject) =>
+        setTimeout(() => {
+          if (data.email === EMAIL && data.password === PASSWORD) {
+            return resolve;
+          }
+          return reject("Incorrect username or password.");
+        }, 1000),
+      );
+    } catch (error) {
+      alert(error);
+    }
   };
 
   return (
