@@ -3,9 +3,10 @@ import * as stylex from "@stylexjs/stylex";
 export const colors = stylex.defineVars({
   primaryText: { default: "#414141" },
   light: { default: "#FFFFFF" },
+  alert: { default: "rgb(202, 253, 245)" },
   // primary
   primary300: { default: "#FFCC21" },
-  primary400: { default: "#FF963C" },
+  primary: { default: "#FF963C" }, // primary400
   primary500: { default: "#EA6C00" },
   primary300400: { default: "linear-gradient(180deg, #FFCC21 0%, #FF963C 100%)" },
   // secondary
@@ -26,4 +27,16 @@ export const spacing = stylex.defineVars({
   xlarge: "32px",
   xxlarge: "48px",
   xxxlarge: "96px",
+});
+
+export const base = stylex.defineVars({
+  borderRadius: "8px",
+  border: "1px solid rgb(228, 228, 231)",
+  paddingCard: "24px",
+});
+
+export const font = stylex.defineVars({
+  normal: "400",
+  semibold: "600",
+  bold: "bold",
 });
