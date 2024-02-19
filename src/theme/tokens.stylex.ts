@@ -1,10 +1,15 @@
 import * as stylex from "@stylexjs/stylex";
 
-export const DEVICES = {
-  mobile: "768px",
-  tablets: "1024px",
-  desktops: "1200px",
-};
+export const devices = stylex.defineVars({
+  mobile: { default: "768px" },
+  tablets: { default: "1024px" },
+  desktops: { default: "1200px" },
+});
+
+export const sizeLayout = stylex.defineVars({
+  header: { default: "64px" },
+  footer: { default: "128px" },
+});
 
 export const colors = stylex.defineVars({
   primaryText: { default: "#414141" },
@@ -59,6 +64,7 @@ export const fontSize = stylex.defineVars({
   medium: "14px",
   large: "16px",
   xlarge: "18px",
+  xxlarge: "20px",
 });
 
 export const shadow = stylex.defineVars({

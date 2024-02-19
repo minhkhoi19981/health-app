@@ -1,3 +1,3 @@
-import Login from "./login";
+import LoginPage from "./LoginPage";
 
-export default Login;
+export default LoginPage;

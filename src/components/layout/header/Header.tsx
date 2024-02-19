@@ -2,7 +2,7 @@ import * as stylex from "@stylexjs/stylex";
 import { Badge, Icon, Space } from "~/components";
 import { IconLogo } from "~/assets/icons";
 import { styles } from "./Header.stylex";
-import { MENUS } from "./_defaultProps";
+import { MENUS } from "../_defaultProps";
 import PopoverMenu from "./components";
 
 type HeaderProps = {};

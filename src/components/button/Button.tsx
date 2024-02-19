@@ -15,7 +15,7 @@ type ButtonProps = {
 
 const Button: React.FC<ButtonProps> = ({ children, style, theme, block, ...props }) => {
   return (
-    <button {...props} {...stylex.props(theme, styles.base, block && styles.block, style as stylex.StyleXStyles)}>
+    <button {...props} {...stylex.props(theme, styles.base, block && styles.block, style)}>
       {children}
     </button>
   );

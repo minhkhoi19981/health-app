@@ -2,7 +2,7 @@ import * as stylex from "@stylexjs/stylex";
 import { IconClose, IconMenu } from "~/assets/icons";
 import { Icon, Popover } from "~/components";
 import { styles } from "./PopoverMenu.stylex";
-import { MENUS_POPOVER } from "../_defaultProps";
+import { MENUS_POPOVER } from "../../_defaultProps";
 import { useCallback, useState } from "react";
 
 type PopoverMenuProps = {};

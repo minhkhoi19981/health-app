@@ -3,7 +3,8 @@ import { Outlet, createBrowserRouter } from "react-router-dom";
 import ProtectedRoute from "./ProtectedRoute";
 import { Layout } from "~/components";
 
-const Login = lazy(() => import("pages/login"));
+const LoginPage = lazy(() => import("pages/login"));
+const HomePage = lazy(() => import("pages/home"));
 
 const router = createBrowserRouter([
   {
@@ -17,11 +18,11 @@ const router = createBrowserRouter([
         </Suspense>
       </ProtectedRoute>
     ),
-    children: [{ element: <div></div>, index: true }],
+    children: [{ element: <HomePage />, index: true }],
   },
   {
     path: "login",
-    element: <Login />,
+    element: <LoginPage />,
   },
 ]);
 

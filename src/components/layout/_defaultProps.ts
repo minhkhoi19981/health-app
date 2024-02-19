@@ -45,3 +45,30 @@ export const MENUS_POPOVER = [
     key: "設定",
   },
 ];
+
+export const MENUS_FOOTER = [
+  {
+    label: "会員登録",
+    key: "会員登録",
+  },
+  {
+    label: "運営会社",
+    key: "運営会社",
+  },
+  {
+    label: "利用規約",
+    key: "利用規約",
+  },
+  {
+    label: "個人情報の取扱について",
+    key: "個人情報の取扱について",
+  },
+  {
+    label: "特定商取引法に基づく表記",
+    key: "特定商取引法に基づく表記",
+  },
+  {
+    label: "お問い合わせ",
+    key: "お問い合わせ",
+  },
+];
