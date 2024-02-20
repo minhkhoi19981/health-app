@@ -18,9 +18,7 @@ const Header: React.FC<HeaderProps> = () => {
 
   const onHandleLogout = () => {
     removeAuth();
-    navigate("/login", {
-      replace: true,
-    });
+    navigate("/login");
   };
 
   return (

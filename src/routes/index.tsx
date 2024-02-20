@@ -1,20 +1,19 @@
-import { Suspense, lazy } from "react";
+import { Suspense } from "react";
 import { Navigate, Outlet, createBrowserRouter } from "react-router-dom";
 import ProtectedRoute from "./ProtectedRoute";
 import { Layout } from "~/components";
-
-const LoginPage = lazy(() => import("pages/login"));
-const HomePage = lazy(() => import("pages/home"));
-const Page404 = lazy(() => import("pages/404"));
-const ColumnDirectoryPage = lazy(() => import("pages/column-directory"));
-const MyOwnRecordPage = lazy(() => import("pages/my-own-record"));
+import HomePage from "pages/home";
+import MyOwnRecordPage from "pages/my-own-record";
+import ColumnDirectoryPage from "pages/column-directory";
+import LoginPage from "pages/login";
+import Page404 from "pages/404";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: (
       <ProtectedRoute>
-        <Suspense>
+        <Suspense fallback={<div>...Loading</div>}>
           <Layout>
             <Outlet />
           </Layout>

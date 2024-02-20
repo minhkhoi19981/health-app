@@ -1,0 +1,16 @@
+export const PATH_ROUTE = {
+  MY_OWN_RECORD: "/my-own-record",
+  TRIAL: "/trial",
+  NOTICE: "/notice",
+  WEIGHT_GRAPH: "/weight-graph",
+  GOAL: "/goal",
+  CURRENT_COURSE_SELECTION: "/current-course-selection",
+  COLUMN_DIRECTORY: "/column-directory",
+  SETTINGS: "/settings",
+  MEMBERSHIP_REGISTRATION: "/membership-registration",
+  MANAGEMENT_COMPANY: "/management-company",
+  TERMS_OF_SERVICE: "/terms-of-service",
+  PRIVACY_POLICY: "/privacy-policy",
+  SPECIFIC_COMMERCIAL_TRANSACTIONS_ACT: "/pecific-commercial-transactions-act",
+  CONTRACT: "/contact",
+};

@@ -7,7 +7,8 @@ import { IconAlert } from "~/assets/icons";
 import { styles } from "./LoginView.stylex";
 import { Button, Icon, Input } from "~/components";
 import { authStore } from "~/store";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { PATH_ROUTE } from "~/utils/constants";
 
 type LoginViewProps = {};
 
@@ -66,10 +67,16 @@ const LoginView: React.FC<LoginViewProps> = () => {
     <div {...stylex.props(styles.container)}>
       <div {...stylex.props(styles.boxLogin)}>
         <h3 {...stylex.props(styles.title)}>Sign in to Health</h3>
+        <div {...stylex.props(styles.alert, styles.navigate)}>
+          <Icon icon={IconAlert} size="small" />
+          Go to
+          <Link to={PATH_ROUTE.COLUMN_DIRECTORY}> コラム一覧</Link>. You can watch it without login.
+        </div>
         <div {...stylex.props(styles.alert)}>
           <Icon icon={IconAlert} size="small" />
           <div dangerouslySetInnerHTML={{ __html: INFO_AUTH_HTML }} />
         </div>
+
         <form {...stylex.props(styles.form)} onSubmit={handleSubmit(onSubmit)}>
           <Input
             {...register("email")}
@@ -85,6 +92,7 @@ const LoginView: React.FC<LoginViewProps> = () => {
             placeholder="Password"
             label="Password"
           />
+
           <Button style={[styles.buttonBlackBg]} block disabled={isSubmitting} type="submit">
             {isSubmitting ? "Loading..." : "Login"}
           </Button>

@@ -46,6 +46,9 @@ const styles = stylex.create({
     fontSize: "14px",
     fontWeight: font.semibold,
   },
+  navigate: {
+    background: "#fff7e6",
+  },
 });
 
 export { styles };
