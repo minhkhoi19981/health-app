@@ -5,6 +5,7 @@ import { styles } from "./PopoverMenu.stylex";
 import { MENUS_POPOVER } from "../../_defaultProps";
 import { useCallback, useState } from "react";
 import { COLORS } from "~/theme/tokens.stylex";
+import { NavLink } from "react-router-dom";
 
 type PopoverMenuProps = {};
 
@@ -16,9 +17,11 @@ const PopoverContent = ({ onClose }: { onClose?: () => void }) => {
       </div>
       <ul {...stylex.props(styles.popover)}>
         {MENUS_POPOVER.map((menu) => (
-          <div {...stylex.props(styles.boxItem)} key={menu.key}>
-            <li {...stylex.props(styles.item)}>{menu.label}</li>
-          </div>
+          <NavLink className={({ isActive }) => (isActive ? "isActive" : "")} to={menu.route} key={menu.key}>
+            <div {...stylex.props(styles.boxItem)} key={menu.key}>
+              <li {...stylex.props(styles.item)}>{menu.label}</li>
+            </div>
+          </NavLink>
         ))}
       </ul>
     </div>

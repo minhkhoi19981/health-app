@@ -62,3 +62,11 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 } */
+
+.isActive span {
+  color: #ff963c !important;
+}
+
+.isActive li {
+  color: #ff963c !important;
+}
