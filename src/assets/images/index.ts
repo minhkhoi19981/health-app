@@ -9,6 +9,14 @@ import Lunch03 from "./l03.jpg";
 import Dinner01 from "./d01.jpg";
 import Dinner02 from "./d02.jpg";
 import Snack01 from "./s01.jpg";
+import Column01 from "./column-1.jpg";
+import Column02 from "./column-2.jpg";
+import Column03 from "./column-3.jpg";
+import Column04 from "./column-4.jpg";
+import Column05 from "./column-5.jpg";
+import Column06 from "./column-6.jpg";
+import Column07 from "./column-7.jpg";
+import Column08 from "./column-8.jpg";
 
 export {
   Achievement1,
@@ -22,4 +30,12 @@ export {
   Dinner01,
   Dinner02,
   Snack01,
+  Column01,
+  Column02,
+  Column03,
+  Column04,
+  Column05,
+  Column06,
+  Column07,
+  Column08,
 };

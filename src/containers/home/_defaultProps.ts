@@ -35,3 +35,4 @@ export const FILTERS = [
 export const IMAGES_MORNING = [Morning01, Morning02, Morning03];
 export const IMAGES_LUNCH = [Lunch01, Lunch02, Lunch03];
 export const IMAGES_DINNER = [Dinner01, Dinner02];
+

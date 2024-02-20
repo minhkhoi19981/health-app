@@ -9,6 +9,7 @@ import IconLogo from "./icon-logo.svg";
 import IconAlert from "./icon-alert.svg";
 import IconUp from "./icon-up.svg";
 import Icon404 from "./404.gif";
+import IconLogout from "./icon-logout.svg";
 
 export {
   IconChallenge,
@@ -22,4 +23,5 @@ export {
   IconAlert,
   IconUp,
   Icon404,
+  IconLogout,
 };

@@ -17,7 +17,12 @@ const PopoverContent = ({ onClose }: { onClose?: () => void }) => {
       </div>
       <ul {...stylex.props(styles.popover)}>
         {MENUS_POPOVER.map((menu) => (
-          <NavLink className={({ isActive }) => (isActive ? "isActive" : "")} to={menu.route} key={menu.key}>
+          <NavLink
+            onClick={onClose}
+            className={({ isActive }) => (isActive ? "isActive" : "")}
+            to={menu.route}
+            key={menu.key}
+          >
             <div {...stylex.props(styles.boxItem)} key={menu.key}>
               <li {...stylex.props(styles.item)}>{menu.label}</li>
             </div>

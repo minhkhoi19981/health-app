@@ -17,7 +17,7 @@ export const styles = stylex.create({
     fontSize: "15px",
     letterSpacing: "0.15px",
     paddingInline: "8px",
-    paddingBlock: "7px",
+    paddingBlock: "2px",
     background: colors.primary300,
     position: "absolute",
     bottom: 0,

@@ -9,7 +9,7 @@ const ProtectedRoute: React.FC<Props> = ({ children }) => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    if (user.authed === AUTH.NOT_AUTHED) {
+    if (user.authed === AUTH.NOT_AUTHED || !user) {
       navigate("/login", { replace: true });
     }
   }, [navigate, user]);

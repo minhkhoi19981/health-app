@@ -8,5 +8,7 @@ import Popover from "./popover";
 import CardPhoto from "./photo";
 import Scrollbar from "./scrollbar";
 import ScrollToTop from "./scroll-to-top";
+import Card from "./card";
+import Tag from "./tag/index";
 
-export { Input, Button, Layout, Icon, Space, Badge, Popover, CardPhoto, Scrollbar, ScrollToTop };
+export { Input, Button, Layout, Icon, Space, Badge, Popover, CardPhoto, Scrollbar, ScrollToTop, Card, Tag };

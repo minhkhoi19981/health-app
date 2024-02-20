@@ -24,6 +24,7 @@ export const styles = stylex.create({
   logo: {
     width: "109px",
     height: "40px",
+    cursor: "pointer",
   },
   menus: {
     display: "flex",
@@ -45,5 +46,8 @@ export const styles = stylex.create({
     fontWeight: "300",
     lineHeight: "23px",
     textAlign: "center",
+  },
+  logout: {
+    cursor: "pointer",
   },
 });

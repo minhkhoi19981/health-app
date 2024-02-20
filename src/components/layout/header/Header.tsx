@@ -1,19 +1,32 @@
 import * as stylex from "@stylexjs/stylex";
 import { Badge, Icon, Space } from "~/components";
-import { IconLogo } from "~/assets/icons";
+import { IconLogo, IconLogout } from "~/assets/icons";
 import { styles } from "./Header.stylex";
 import { MENUS } from "../_defaultProps";
 import PopoverMenu from "./components";
 import { COLORS } from "~/theme/tokens.stylex";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
+import { authStore } from "~/store";
 
 type HeaderProps = {};
 
 const Header: React.FC<HeaderProps> = () => {
+  const { removeAuth } = authStore();
+  const navigate = useNavigate();
+
+  const onGoHome = () => navigate("/");
+
+  const onHandleLogout = () => {
+    removeAuth();
+    navigate("/login", {
+      replace: true,
+    });
+  };
+
   return (
     <div {...stylex.props(styles.header)}>
       <div {...stylex.props(styles.box)}>
-        <Icon color={COLORS.primary} icon={IconLogo} style={styles.logo} name="health-logo" />
+        <Icon onClick={onGoHome} color={COLORS.primary} icon={IconLogo} style={styles.logo} name="health-logo" />
         <div {...stylex.props(styles.menus)}>
           {MENUS.map((menu) => (
             <NavLink className={({ isActive }) => (isActive ? "isActive" : "")} to={menu.route} key={menu.name}>
@@ -26,6 +39,7 @@ const Header: React.FC<HeaderProps> = () => {
             </NavLink>
           ))}
           <PopoverMenu />
+          <Icon onClick={onHandleLogout} color={COLORS.primary} icon={IconLogout} name="logout" style={styles.logout} />
         </div>
       </div>
     </div>

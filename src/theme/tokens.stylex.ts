@@ -69,8 +69,31 @@ export const fontSize = stylex.defineVars({
   large: "16px",
   xlarge: "18px",
   xxlarge: "20px",
+  xxxlarge: "22px",
 });
 
 export const shadow = stylex.defineVars({
-  small: "rgb(255, 255, 255) 0px 0px 0px 1px",
+  small: "rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px",
+});
+
+export const gridBase = stylex.create({
+  container: {
+    width: "100%",
+    textAlign: "center",
+  },
+  grid: {
+    display: "grid",
+    gridTemplateColumns: "1fr 1fr 1fr 1fr",
+    gap: "6px",
+  },
+  item: {
+    width: "100%",
+    maxHeight: "234px",
+  },
+  btnLoadMore: {
+    marginTop: "32px",
+    width: "296px",
+    height: "56px",
+    background: colors.primary300400,
+  },
 });
