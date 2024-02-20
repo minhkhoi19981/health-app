@@ -15,7 +15,10 @@ export const styles = stylex.create({
     clipPath: "polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%)",
     width: "136px",
     height: "136px",
-    background: colors.primary300400,
+    background: {
+      default: colors.primary300400,
+      ":hover": colors.primary500,
+    },
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
@@ -25,9 +28,9 @@ export const styles = stylex.create({
     fontWeight: font.normal,
     lineHeight: "24px",
     cursor: "pointer",
-    opacity: {
-      default: 1,
-      ":hover": 0.8,
-    },
+    transition: "background 0.25s",
+  },
+  active: {
+    background: colors.primary500,
   },
 });

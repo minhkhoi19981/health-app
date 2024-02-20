@@ -2,7 +2,7 @@ import * as stylex from "@stylexjs/stylex";
 import { base, font, spacing } from "../../theme/tokens.stylex";
 
 export const tokens = stylex.defineVars({
-  cornerRadius: "8px",
+  cornerRadius: "6px",
   paddingInline: "12px",
   paddingBlock: "11px",
 });

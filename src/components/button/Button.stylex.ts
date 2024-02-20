@@ -1,10 +1,10 @@
 import * as stylex from "@stylexjs/stylex";
-import { colors } from "../../theme/tokens.stylex";
+import { colors, font } from "../../theme/tokens.stylex";
 
 export const tokens = stylex.defineVars({
   bgColor: colors.primary,
   textColor: "white",
-  cornerRadius: "8px",
+  cornerRadius: "6px",
   paddingBlock: "12px",
   paddingInline: "16px",
 });
@@ -19,8 +19,14 @@ export const styles = stylex.create({
     borderRadius: tokens.cornerRadius,
     paddingBlock: tokens.paddingBlock,
     paddingInline: tokens.paddingInline,
-    fontSize: "14px",
-    fontWeight: "600",
+    fontSize: "18px",
+    fontWeight: font.light,
+    cursor: "pointer",
+    transition: "opacity 0.25s",
+    opacity: {
+      default: 1,
+      ":hover": 0.8,
+    },
   },
   block: {
     width: "100%",

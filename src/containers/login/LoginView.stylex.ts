@@ -43,6 +43,8 @@ const styles = stylex.create({
   },
   buttonBlackBg: {
     backgroundColor: "rgb(33, 43, 54)",
+    fontSize: "14px",
+    fontWeight: font.semibold,
   },
 });
 

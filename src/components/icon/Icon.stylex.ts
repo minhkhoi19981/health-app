@@ -8,9 +8,11 @@ export const tokens = stylex.defineVars({
 });
 
 export const styles = stylex.create({
-  base: {
-    color: tokens.color,
-  },
+  base: (image, color) => ({
+    background: color,
+    mask: `url(${image}) no-repeat center / contain`,
+    WebkitMask: `url(${image}) no-repeat center / contain`,
+  }),
   default: {
     width: tokens.width,
     height: tokens.height,

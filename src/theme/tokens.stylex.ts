@@ -11,13 +11,17 @@ export const sizeLayout = stylex.defineVars({
   footer: { default: "128px" },
 });
 
+export const COLORS = {
+  primary: "#FF963C",
+};
+
 export const colors = stylex.defineVars({
   primaryText: { default: "#414141" },
   light: { default: "#FFFFFF" },
   alert: { default: "rgb(202, 253, 245)" },
   // primary
   primary300: { default: "#FFCC21" },
-  primary: { default: "#FF963C" }, // primary400
+  primary: { default: COLORS.primary }, // primary400
   primary500: { default: "#EA6C00" },
   primary300400: { default: "linear-gradient(180deg, #FFCC21 0%, #FF963C 100%)" },
   // secondary

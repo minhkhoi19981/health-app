@@ -7,10 +7,13 @@ type IconProps = {
   size?: "small" | "default" | "large";
   style?: stylex.StyleXStyles;
   onClick?: () => void;
+  color?: string;
 };
 
-const Icon: React.FC<IconProps> = ({ icon, style, name, size = "default", onClick }) => {
-  return <img onClick={onClick} src={icon} alt={name} {...stylex.props(styles.base, styles[size], style)} />;
+const Icon: React.FC<IconProps> = ({ icon, style, name, size = "default", onClick, color = "currentColor" }) => {
+  return <div id={name} onClick={onClick} {...stylex.props(styles.base(icon, color), styles[size], style)} />;
+  {
+  }
 };
 
 export default Icon;

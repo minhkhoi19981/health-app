@@ -7,5 +7,6 @@ import IconMemo from "./icon-memo.svg";
 import IconMenu from "./icon-menu.svg";
 import IconLogo from "./icon-logo.svg";
 import IconAlert from "./icon-alert.svg";
+import IconUp from "./icon-up.svg";
 
-export { IconChallenge, IconClose, IconCup, IconInfo, IconKnife, IconMemo, IconMenu, IconLogo, IconAlert };
+export { IconChallenge, IconClose, IconCup, IconInfo, IconKnife, IconMemo, IconMenu, IconLogo, IconAlert, IconUp };

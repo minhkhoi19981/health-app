@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { IMAGES } from "../_defaultProps";
+import { IMAGES } from "../containers/home/_defaultProps";
 
 const useImagesAchievement = () => {
   const [images, setImage] = useState<string[]>([]);

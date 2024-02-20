@@ -4,8 +4,8 @@ import { useInterval } from "usehooks-ts";
 import { CircularProgressbarWithChildren, buildStyles } from "react-circular-progressbar";
 import dayjs from "dayjs";
 import * as stylex from "@stylexjs/stylex";
+import { useImagesAchievement } from "~/hooks";
 import { styles } from "./AchievementRate.stylex";
-import { useImagesAchievement } from "../../hooks";
 
 type AchievementRateProps = {};
 

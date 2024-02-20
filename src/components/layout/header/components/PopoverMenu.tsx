@@ -4,13 +4,16 @@ import { Icon, Popover } from "~/components";
 import { styles } from "./PopoverMenu.stylex";
 import { MENUS_POPOVER } from "../../_defaultProps";
 import { useCallback, useState } from "react";
+import { COLORS } from "~/theme/tokens.stylex";
 
 type PopoverMenuProps = {};
 
 const PopoverContent = ({ onClose }: { onClose?: () => void }) => {
   return (
     <div {...stylex.props(styles.boxPopover)}>
-      <Icon onClick={onClose} style={styles.iconClose} icon={IconClose} name="close" />
+      <div {...stylex.props(styles.boxIconClose)}>
+        <Icon color={COLORS.primary} onClick={onClose} style={styles.iconClose} icon={IconClose} name="close" />
+      </div>
       <ul {...stylex.props(styles.popover)}>
         {MENUS_POPOVER.map((menu) => (
           <div {...stylex.props(styles.boxItem)} key={menu.key}>
@@ -28,8 +31,13 @@ const PopoverMenu: React.FC<PopoverMenuProps> = () => {
   const onHandleOpen = useCallback(() => setOpen((value) => !value), []);
   const onHandleClose = useCallback(() => setOpen(false), []);
   return (
-    <Popover onOpen={onHandleOpen} open={open} content={<PopoverContent onClose={onHandleClose} />}>
-      <Icon icon={IconMenu} style={styles.icon} />
+    <Popover
+      onClose={onHandleClose}
+      onOpen={onHandleOpen}
+      open={open}
+      content={<PopoverContent onClose={onHandleClose} />}
+    >
+      <Icon color={COLORS.primary} icon={IconMenu} style={styles.icon} />
     </Popover>
   );
 };

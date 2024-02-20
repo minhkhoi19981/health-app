@@ -4,14 +4,28 @@ import { FILTERS } from "../../_defaultProps";
 import { styles } from "./FilterButtons.stylex";
 import { IconKnife } from "~/assets/icons";
 
-type FilterButtonsProps = {};
+type FilterButtonsProps = {
+  onSelected: (id: string) => void;
+  selected?: string;
+};
 
-const FilterButtons: React.FC<FilterButtonsProps> = () => {
+const FilterButtons: React.FC<FilterButtonsProps> = ({ onSelected, selected }) => {
+  const onHandleSelected = (id: string) => {
+    if (selected === id) {
+      onSelected("");
+    } else {
+      onSelected(id);
+    }
+  };
   return (
     <div {...stylex.props(styles.filters)}>
       {FILTERS.map((filter) => {
         return (
-          <div key={filter.id} {...stylex.props(styles.button)}>
+          <div
+            onClick={() => onHandleSelected(filter.id)}
+            key={filter.id}
+            {...stylex.props(styles.button, selected === filter.id && styles.active)}
+          >
             <Space direction="vertical" size={2}>
               <Icon icon={IconKnife} style={styles.icon} />
               <span>{filter.label}</span>

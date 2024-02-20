@@ -10,13 +10,14 @@ export const styles = stylex.create({
     flexDirection: "column",
     alignItems: "flex-end",
   },
-  iconClose: {
+  boxIconClose: {
     background: colors.dark500,
+  },
+  iconClose: {
     cursor: "pointer",
     zIndex: 2,
   },
   popover: {
-    background: colors.gray400,
     fontFamily: font.hiraginoKaku,
     fontSize: fontSize.xlarge,
     lineHeight: "26px",
@@ -28,15 +29,16 @@ export const styles = stylex.create({
   },
   boxItem: {
     borderBottom: "1px solid rgba(255, 255, 255, .15)",
+    cursor: "pointer",
+    background: {
+      default: colors.gray400,
+      ":hover": colors.primary300,
+    },
+    color: colors.light,
   },
   item: {
-    paddingBlock: "12px",
-    paddingInline: "24px",
+    paddingBlock: "22px",
+    paddingInline: "32px",
     borderBottom: "1px solid rgba(46, 46, 46, .25)",
-    cursor: "pointer",
-    color: {
-      default: colors.light,
-      ":hover": colors.primary,
-    },
   },
 });
