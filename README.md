@@ -1,4 +1,4 @@
-# React + TypeScript + Vite
+<!-- # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
@@ -28,4 +28,32 @@ export default {
 - Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
 - Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
 - Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
-# health-app
+# health-app -->
+
+# Project Health App: React + TypeScript + Vite
+
+## Account login
+
+- email: demo@health.app
+- password: demo1234
+
+## Technologies
+
+- Language: TypeScript, HTML, CSS
+- JavaScript framework: [React.js]
+- UI framework: [Stylex](https://stylexjs.com//)
+- Architecture: Single Page Application
+- Apply SOLID principles
+
+## Setup
+
+Requirements:
+
+- Node v18.x
+- Yarn v1.22.x
+
+Install dependencies:
+
+```bash
+$ yarn install
+```
