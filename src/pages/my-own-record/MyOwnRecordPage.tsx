@@ -1,7 +1,9 @@
+import MyOwnRecordView from "~/containers/my-own-record";
+
 type MyOwnRecordPageProps = {};
 
 const MyOwnRecordPage: React.FC<MyOwnRecordPageProps> = () => {
-  return <div>MyOwnRecordPage</div>;
+  return <MyOwnRecordView />;
 };
 
 export default MyOwnRecordPage;

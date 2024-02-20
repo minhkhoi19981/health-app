@@ -14,3 +14,9 @@ type Directory = {
   id: string;
   tags?: string[];
 };
+
+type Diary = {
+  date: string;
+  time: string;
+  content: string;
+};

@@ -71,3 +71,11 @@ button:focus-visible {
 .isActive li {
   color: #ff963c !important;
 }
+
+#exerciseRecord .simplebar-track.simplebar-vertical {
+  background-color: #777777;
+}
+
+#exerciseRecord .simplebar-track.simplebar-vertical .simplebar-scrollbar:before {
+  background-image: linear-gradient(#ffcc21, #ffcc21);
+}

@@ -46,8 +46,8 @@ export const MENUS_POPOVER = [
   },
   {
     label: "コラム一覧",
-    key: "column-directory",
-    route: PATH_ROUTE.COLUMN_DIRECTORY,
+    key: "about-health",
+    route: PATH_ROUTE.ABOUT_HEALTH,
   },
   {
     label: "設定",

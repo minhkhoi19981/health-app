@@ -13,6 +13,7 @@ export const sizeLayout = stylex.defineVars({
 
 export const COLORS = {
   primary: "#FF963C",
+  secondary300: "#8FE9D0",
 };
 
 export const colors = stylex.defineVars({
@@ -84,7 +85,7 @@ export const gridBase = stylex.create({
   grid: {
     display: "grid",
     gridTemplateColumns: "1fr 1fr 1fr 1fr",
-    gap: "6px",
+    gap: "8px",
   },
   item: {
     width: "100%",

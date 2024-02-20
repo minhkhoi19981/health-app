@@ -70,7 +70,7 @@ const LoginView: React.FC<LoginViewProps> = () => {
         <div {...stylex.props(styles.alert, styles.navigate)}>
           <Icon icon={IconAlert} size="small" />
           Go to
-          <Link to={PATH_ROUTE.COLUMN_DIRECTORY}> コラム一覧</Link>. You can watch it without login.
+          <Link to={PATH_ROUTE.ABOUT_HEALTH}> コラム一覧</Link>. You can watch it without login.
         </div>
         <div {...stylex.props(styles.alert)}>
           <Icon icon={IconAlert} size="small" />

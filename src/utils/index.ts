@@ -6,7 +6,7 @@ import {
   RECOMMEND_COLUMNS,
   RECOMMEND_DIETS,
   RECOMMEND_HEALTHS,
-} from "~/containers/column-directory/_defaultProps";
+} from "~/containers/about-health/_defaultProps";
 
 export const genDataFood = () => {
   let result: FoodItem[] = [];
@@ -85,6 +85,17 @@ export const genDataDirectories = () => {
     ];
     result.push(...fake);
   });
+  return result;
+};
+
+export const genMyDiaries = () => {
+  const result: Diary[] = Array.from(Array(16).keys()).map((item) => ({
+    date: `2021.05.${21 - item}`,
+    time: "23:25",
+    content:
+      "私の日記の記録が一部表示されます。 <br/>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト",
+  }));
+
   return result;
 };
 

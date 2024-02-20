@@ -5,7 +5,7 @@ export const PATH_ROUTE = {
   WEIGHT_GRAPH: "/weight-graph",
   GOAL: "/goal",
   CURRENT_COURSE_SELECTION: "/current-course-selection",
-  COLUMN_DIRECTORY: "/column-directory",
+  ABOUT_HEALTH: "/about-health",
   SETTINGS: "/settings",
   MEMBERSHIP_REGISTRATION: "/membership-registration",
   MANAGEMENT_COMPANY: "/management-company",

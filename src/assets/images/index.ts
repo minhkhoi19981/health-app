@@ -17,6 +17,9 @@ import Column05 from "./column-5.jpg";
 import Column06 from "./column-6.jpg";
 import Column07 from "./column-7.jpg";
 import Column08 from "./column-8.jpg";
+import MyRecommend01 from "./MyRecommend-1.jpg";
+import MyRecommend02 from "./MyRecommend-2.jpg";
+import MyRecommend03 from "./MyRecommend-3.jpg";
 
 export {
   Achievement1,
@@ -38,4 +41,7 @@ export {
   Column06,
   Column07,
   Column08,
+  MyRecommend01,
+  MyRecommend02,
+  MyRecommend03,
 };

@@ -1,6 +1,6 @@
-import AchievementRate from "./AchievementRate";
-import FilterButtons from "./FilterButtons";
-import GridFood from "./GridFood/index";
-import ChartAchievement from "./ChartAchievement/index";
+import AchievementRate from "./achievement-rate";
+import FilterButtons from "./filter-buttons";
+import GridFood from "./grid-food";
+import ChartAchievement from "./chart-achievement";
 
 export { AchievementRate, FilterButtons, GridFood, ChartAchievement };

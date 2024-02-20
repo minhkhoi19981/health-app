@@ -11,7 +11,7 @@ const ProtectedRoute: React.FC<Props> = ({ children }) => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    if (pathname === PATH_ROUTE.COLUMN_DIRECTORY) {
+    if (pathname === PATH_ROUTE.ABOUT_HEALTH) {
       return;
     }
     if (user.authed === AUTH.NOT_AUTHED || !user) {

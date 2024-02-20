@@ -5,16 +5,19 @@ import { styles } from "./Scrollbar.stylex";
 
 type ScrollbarProps = PropsWithChildren & {
   style?: stylex.StyleXStyles;
+  id?: string;
 };
 
-const Scrollbar = forwardRef(({ children, style }: ScrollbarProps, ref) => {
+const Scrollbar = forwardRef(({ children, style, id }: ScrollbarProps, ref) => {
   return (
     <SimpleBar
+      id={id}
       {...stylex.props(styles.base, style)}
       scrollableNodeProps={{
         ref,
       }}
       clickOnTrack={false}
+      autoHide={false}
     >
       {children}
     </SimpleBar>
