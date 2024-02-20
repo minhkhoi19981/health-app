@@ -45,6 +45,21 @@ export default {
 - Architecture: Single Page Application
 - Apply SOLID principles
 
+## Project Structure
+
+````bash
+src
+├── assets              → Uncompiled images, svg
+├── components          → React components
+├── containers          → Application page component
+├── hooks               → custom hook logic and data
+├── pages               → Application views
+├── routes              → Application route
+├── store               → State management
+├── theme               → Global token stylex
+├── types               → TypeScript types
+├── utils               → Common function
+
 ## Setup
 
 Requirements:
@@ -56,4 +71,4 @@ Install dependencies:
 
 ```bash
 $ yarn install
-```
+````
