@@ -8,5 +8,18 @@ import IconMenu from "./icon-menu.svg";
 import IconLogo from "./icon-logo.svg";
 import IconAlert from "./icon-alert.svg";
 import IconUp from "./icon-up.svg";
+import Icon404 from "./404.gif";
 
-export { IconChallenge, IconClose, IconCup, IconInfo, IconKnife, IconMemo, IconMenu, IconLogo, IconAlert, IconUp };
+export {
+  IconChallenge,
+  IconClose,
+  IconCup,
+  IconInfo,
+  IconKnife,
+  IconMemo,
+  IconMenu,
+  IconLogo,
+  IconAlert,
+  IconUp,
+  Icon404,
+};
