@@ -7,6 +7,7 @@ const LoginPage = lazy(() => import("pages/login"));
 const HomePage = lazy(() => import("pages/home"));
 const Page404 = lazy(() => import("pages/404"));
 const ColumnDirectoryPage = lazy(() => import("pages/column-directory"));
+const MyOwnRecordPage = lazy(() => import("pages/my-own-record"));
 
 const router = createBrowserRouter([
   {
@@ -22,6 +23,7 @@ const router = createBrowserRouter([
     ),
     children: [
       { element: <HomePage />, index: true },
+      { path: "my-own-record", element: <MyOwnRecordPage /> },
       { path: "column-directory", element: <ColumnDirectoryPage /> },
     ],
   },

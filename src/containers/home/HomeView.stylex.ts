@@ -20,4 +20,5 @@ export const styles = stylex.create({
     margin: "auto",
     paddingInline: "24px",
   },
+  chart: {},
 });

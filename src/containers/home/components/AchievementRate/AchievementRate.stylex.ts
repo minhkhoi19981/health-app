@@ -3,7 +3,7 @@ import { colors, font, fontSize } from "../../../../theme/tokens.stylex";
 
 export const styles = stylex.create({
   box: {
-    height: "316px",
+    height: "370px",
     overflow: "hidden",
     position: "relative",
   },

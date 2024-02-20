@@ -1,6 +1,6 @@
 import * as stylex from "@stylexjs/stylex";
 import { styles } from "./HomeView.stylex";
-import { AchievementRate, FilterButtons, GridFood } from "./components";
+import { AchievementRate, ChartAchievement, FilterButtons, GridFood } from "./components";
 import { useCallback, useState } from "react";
 
 type HomeViewProps = {};
@@ -14,6 +14,7 @@ const HomeView: React.FC<HomeViewProps> = () => {
     <div {...stylex.props(styles.container)}>
       <div {...stylex.props(styles.firstColumn)}>
         <AchievementRate />
+        <ChartAchievement />
       </div>
       <div {...stylex.props(styles.filterButton)}>
         <FilterButtons onSelected={onHandleFilter} selected={filter} />
